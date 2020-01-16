@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class FakeInfoManager implements InfoHandler {
+public class FakeInfoProvider implements InfoProvider {
     public HashMap<String, String> getTodayPages() {
         HashMap<String, String> today = new HashMap<String, String>();
         today.put("www.loogle.com/login", "<html>Content</html>");

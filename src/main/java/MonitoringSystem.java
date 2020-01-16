@@ -1,7 +1,6 @@
 import java.util.HashMap;
 import java.util.Iterator;
 
-//сделать отдельным потоком
 public class MonitoringSystem {
 
     private static String prepareMessage(Analyser info)
@@ -49,12 +48,12 @@ public class MonitoringSystem {
 
     public static void main(String[] args)
     {
-        String maillogin = "default@yandex.ru"; //поменять
-        String mailpassword = "admin";   //поменять
-        String recipient = "to@yandex.ru"; //поменять
+        String maillogin = "default@yandex.ru";
+        String mailpassword = "admin";
+        String recipient = "to@yandex.ru";
 
 
-        InfoHandler infomanager = new FakeInfoManager();
+        InfoProvider infomanager = new FakeInfoProvider();
         HashMap<String, String> yesterday;
         HashMap<String, String> today;
         today = infomanager.getTodayPages();
